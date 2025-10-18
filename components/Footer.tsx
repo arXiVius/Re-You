@@ -42,7 +42,7 @@ const Footer = () => {
 
         {/* Right side */}
         <a
-          href="https://github.com/arxivius/"
+          href="https://github.com/arxivius/Re-You"
           target="_blank"
           rel="noopener noreferrer"
           className="font-sans tracking-wide text-center text-white bg-transparent border border-white/50 py-2 px-4 rounded-md transition-colors duration-200 hover:bg-white hover:text-black whitespace-nowrap"
