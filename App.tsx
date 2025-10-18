@@ -10,6 +10,7 @@ import { createAlbumPage } from './lib/albumUtils';
 import { dataURLtoFile } from './lib/utils';
 import Footer from './components/Footer';
 import ConfigModal, { GenerationConfig } from './components/ConfigModal';
+import ReactiveGrid from "@/components/ReactiveGrid";
 
 
 const DECADES = ['1920s', '1930s', '1940s', '1950s', '1960s', '1970s', '1980s', '1990s', '2000s', '2010s'];
@@ -297,6 +298,22 @@ function App() {
 
     return (
         <main className="bg-stone-950 text-stone-200 min-h-screen w-full flex flex-col items-center justify-center p-4 pb-24 overflow-hidden relative isolate">
+           <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2.5, ease: "easeOut" }}
+            className="absolute inset-0 -z-10"
+           >
+            <ReactiveGrid
+             gridSize={35}
+             radius={140}
+             dotSize={1.3}
+             color="rgba(55, 55, 55, 1)" // soft subtle glow
+             speed={0.05}
+             breatheSpeed={8}
+             breatheAmount={0.1}
+            />
+           </motion.div>
             <div className="absolute inset-0 flex items-center justify-center -z-20 pointer-events-none">
                 <span className="text-[40rem] text-stone-800 opacity-10 leading-none select-none">💫</span>
             </div>
